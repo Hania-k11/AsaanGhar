@@ -1,10 +1,12 @@
 
 import { Search, MapPin, HomeIcon, DollarSign } from "lucide-react"
 import { motion } from "framer-motion" // eslint-disable-line no-unused-vars
+import FloatingElements from "./FloatingElements"
 
 const Hero = () => {
   return (
     <div className="relative pt-20 overflow-hidden">
+    
       {/* Background with parallax effect */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-200/90 to-teal-800/60 z-10"></div>
@@ -27,8 +29,9 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-
+      
       <div className="container mx-auto px-4 relative z-10 h-screen flex flex-col justify-center">
+    
         <div className="max-w-3xl">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

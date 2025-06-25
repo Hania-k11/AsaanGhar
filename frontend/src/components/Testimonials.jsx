@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import {  AnimatePresence } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import FloatingElements from "./FloatingElements"
 
 const Testimonials = () => {
   const [ref, inView] = useInView({
@@ -71,6 +72,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+       
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -85,7 +87,7 @@ const Testimonials = () => {
             Ghar.
           </p>
         </motion.div>
-
+        
         <div className="relative max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
