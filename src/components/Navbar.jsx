@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Home, Menu, X } from "lucide-react";
@@ -14,6 +15,28 @@ const Navbar = ({ onLoginClick }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+=======
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion" // eslint-disable-line no-unused-vars
+import { Home, Menu, X } from "lucide-react"
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
 
   return (
     <motion.nav
@@ -21,7 +44,11 @@ const Navbar = ({ onLoginClick }) => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
+<<<<<<< HEAD
         isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+=======
+        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent  py-4"
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -47,17 +74,28 @@ const Navbar = ({ onLoginClick }) => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Desktop Login/Register Button */}
+=======
+        {/* Login/Register Button */}
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="hidden md:block bg-gradient-to-r from-emerald-600 to-teal-500 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
+<<<<<<< HEAD
           onClick={onLoginClick}
+=======
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
         >
           Login / Register
         </motion.button>
 
+<<<<<<< HEAD
         {/* Mobile Menu Toggle */}
+=======
+        {/* Mobile Menu Button */}
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
         <div className="md:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-700">
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -84,6 +122,7 @@ const Navbar = ({ onLoginClick }) => {
                 {item}
               </a>
             ))}
+<<<<<<< HEAD
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
@@ -91,13 +130,23 @@ const Navbar = ({ onLoginClick }) => {
               }}
               className="bg-gradient-to-r from-emerald-600 to-teal-500 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all"
             >
+=======
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-500 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all">
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
               Login / Register
             </button>
           </div>
         </motion.div>
       )}
     </motion.nav>
+<<<<<<< HEAD
   );
 };
 
 export default Navbar;
+=======
+  )
+}
+
+export default Navbar
+>>>>>>> 5362af6d56ad599016ecc4de6e933af2b096fa8d
